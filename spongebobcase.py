@@ -1,4 +1,11 @@
+import six
+
 class SpongeBobCase():
+    """
+    Methods for altering inputted text,
+    Alternating case: Alternates capitol and lowercase letters
+    Random case: Pseudo-random capitolization
+    """
     
     def __init__(self):
         pass
@@ -8,7 +15,11 @@ class SpongeBobCase():
         output = ""
         count = 0
         
-        text_list = text_dict.values()
+        text_list = []
+        
+        for value in text_dict.values():
+            if isinstance(value, six.string_types):
+                text_list.append(value)
         
         text = ""
         
@@ -25,3 +36,6 @@ class SpongeBobCase():
             count += 1
             
         return output
+    
+    def randomCase():
+        pass
