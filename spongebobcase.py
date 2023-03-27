@@ -1,16 +1,26 @@
 import six
+import random
 
 class SpongeBobCase():
     """
     Methods for altering inputted text,
     Alternating case: Alternates capitol and lowercase letters
-    Random case: Pseudo-random capitolization
+    Random case: Pseudo-random capitalization
     """
     
     def __init__(self):
         pass
         
     def alternatingCase(self, text_dict):
+        """_summary_
+        Takes in the values dictionary from PySimpleGui, takes all string values, 
+        returns them with alternating capital letters \n
+        Args:
+            text_dict (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
         self.text_dict = text_dict
         output = ""
         count = 0
@@ -37,5 +47,5 @@ class SpongeBobCase():
             
         return output
     
-    def randomCase():
+    def randomCase(self):
         pass

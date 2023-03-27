@@ -22,7 +22,8 @@ while True:
     
     if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
-
+    
+    # If Alternating Case checkbox is clicked, cal function
     if values["-AC-"] == True:
         output = sbc.alternatingCase(values)
     
