@@ -40,7 +40,7 @@ class SpongeBobCase():
         for letter in text:
             if count % 2 == 0:
                 output += letter.upper()
-            elif not letter.upper() and not letter.lower:
+            elif not letter.upper() and not letter.lower():
                 output += letter
             else:
                 output += letter
