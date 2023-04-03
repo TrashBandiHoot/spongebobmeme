@@ -11,7 +11,7 @@ class SpongeBobCase():
     def __init__(self):
         pass
         
-    def alternatingCase(self, text_dict):
+    def alternatingCase(self, user_text):
         """_summary_
         Takes in the values dictionary from PySimpleGui, takes all string values, 
         returns them with alternating capital letters \n
@@ -21,20 +21,21 @@ class SpongeBobCase():
         Returns:
             _type_: _description_
         """
-        self.text_dict = text_dict
+        self.user_text_list = list(user_text)
         output = ""
         count = 0
-        
+        text = ""
         text_list = []
         
-        for value in text_dict.values():
-            if isinstance(value, six.string_types):
-                text_list.append(value)
+    
         
-        text = ""
+        for char in self.user_text_list:
+                text_list.append(char)
+        
         
         for str in text_list:
             text += str
+        
         
         for letter in text:
             if count % 2 == 0:

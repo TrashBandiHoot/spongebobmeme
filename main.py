@@ -6,7 +6,7 @@ sbc = SBC()
 sg.theme('DarkAmber')   # Add a touch of color
 # All the stuff inside your window.
 layout = [  [sg.Text('Spongebob Case')],
-            [sg.Text('Enter the text you wish to manipulate'), sg.InputText()],
+            [sg.Text('Enter the text you wish to manipulate'), sg.InputText(key = "user_text")],
             [sg.Button('Ok'), sg.Button('Cancel')],
             [sg.Checkbox("Alternating Case", default=True, key="-AC-")],
             [sg.Checkbox("Random Case", default=False), sg.Text("--This doesn't work yet")],
@@ -25,7 +25,7 @@ while True:
     
     # If Alternating Case checkbox is clicked, cal function
     if values["-AC-"] == True:
-        output = sbc.alternatingCase(values)
+        output = sbc.alternatingCase(values["user_text"])
     
         
     window['OUTPUT'].update(value=output)
